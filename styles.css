@@ -189,3 +189,86 @@ img {
     transform: translateY(1px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+/* Webcam-Container Styling */
+.webcam-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+/* Einzelnes Webcam-Element Styling */
+.webcam-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Titel der Webcam-Orte */
+.webcam-item h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #AE874C;
+}
+
+/* Bilder der Webcams */
+.webcam-item img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.webcam-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Styling */
+.btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #AE874C;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #8C6938;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Ansicht */
+@media (max-width: 768px) {
+    .webcam-container {
+        grid-template-columns: 1fr;
+    }
+
+    .webcam-item {
+        padding: 10px;
+    }
+}
+
