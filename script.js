@@ -29,19 +29,17 @@ function toggleFullscreen(event) {
     }
 }
 
-function refreshAllWebcams() {
-    updateWebcam('webcam1', 'https://www.julianpopp.de/wfc/wfc.jpg');
-    updateWebcam('webcam2', 'https://www.skiarea-heubach.com/wp-content/uploads/2023/12/skiarea-cam.jpg');
-    updateWebcam('webcam3', 'https://vcdn.bergfex.at/webcams/archive.new/downsized/2/13082/2024/12/04/13082_2024-12-04_0930_688d47e0ed941b8b.jpg');
-    updateWebcam('webcam4', 'https://vcdn.bergfex.at/webcams/archive.new/downsized/5/3045/2024/12/04/3045_2024-12-04_0930_688d47e0ed941b8b.jpg');
-}
-
-document.getElementById('refresh-btn').addEventListener('click', refreshAllWebcams);
-
-const webcamImages = document.querySelectorAll('.webcam-item img');
-webcamImages.forEach(img => {
+document.querySelectorAll('.webcam-container img').forEach(img => {
     img.addEventListener('click', toggleFullscreen);
 });
 
-// Automatische Aktualisierung alle 5 Minuten
-setInterval(refreshAllWebcams, 300000); // 300000 Millisekunden = 5 Minuten
+setInterval(() => updateWebcam('webcam1', 'https://www.julianpopp.de/wfc/wfc.jpg'), 600000); // Aktualisiert Webcam 1 alle 10 Minuten
+setInterval(() => updateWebcam('webcam2', 'https://www.skiarea-heubach.com/wp-content/uploads/2023/12/skiarea-cam.jpg'), 600000); // Aktualisiert Webcam 2 alle 10 Minuten
+setInterval(() => updateWebcam('webcam3', 'https://vcdn.bergfex.at/webcams/archive.new/downsized/2/13082/2024/12/04/13082_2024-12-04_0930_688d47e0ed941b8b.jpg'), 600000); // Aktualisiert Webcam 3 alle 10 Minuten
+setInterval(() => updateWebcam('webcam4', 'https://vcdn.bergfex.at/webcams/archive.new/downsized/5/3045/2024/12/04/3045_2024-12-04_0930_688d47e0ed941b8b.jpg'), 600000); // Aktualisiert Webcam 4 alle 10 Minuten
+
+// Initiale Aktualisierung
+updateWebcam('webcam1', 'https://www.julianpopp.de/wfc/wfc.jpg');
+updateWebcam('webcam2', 'https://www.skiarea-heubach.com/wp-content/uploads/2023/12/skiarea-cam.jpg');
+updateWebcam('webcam3', 'https://vcdn.bergfex.at/webcams/archive.new/downsized/2/13082/2024/12/04/13082_2024-12-04_0930_688d47e0ed941b8b.jpg');
+updateWebcam('webcam4', 'https://vcdn.bergfex.at/webcams/archive.new/downsized/5/3045/2024/12/04/3045_2024-12-04_0930_688d47e0ed941b8b.jpg');

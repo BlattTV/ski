@@ -1,9 +1,13 @@
-html, body {
-    height: 100%;
-    margin: 0;
+﻿body {
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
     background-color: #305634;
     color: #E1E0DE;
+    overflow: hidden;
     background-image: url('https://example.com/path/to/christmas-background.jpg'); /* Füge hier den Link zu einem weihnachtlichen Hintergrundbild ein */
     background-size: cover;
     background-position: center;
@@ -15,9 +19,6 @@ html, body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 90vw;
-    max-height: 90vh;
-    overflow: auto;
 }
 
 h1 {
@@ -37,11 +38,11 @@ h1 {
     text-align: center;
 }
 
-.webcam-item h2 {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-    color: #AE874C;
-}
+    .webcam-item h2 {
+        margin-bottom: 10px;
+        font-size: 1.2em;
+        color: #AE874C;
+    }
 
 img {
     max-width: 100%;
@@ -53,10 +54,10 @@ img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
+    img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
 
 .info {
     margin-top: 20px;
@@ -87,18 +88,78 @@ img:hover {
     0% {
         transform: translateY(0);
     }
+
     100% {
         transform: translateY(100vh);
     }
 }
 
-.snowflake:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; font-size: 1.5em; }
-.snowflake:nth-child(2) { left: 20%; animation-duration: 10s; animation-delay: 2s; font-size: 1em; }
-.snowflake:nth-child(3) { left: 30%; animation-duration: 12s; animation-delay: 4s; font-size: 1.2em; }
-.snowflake:nth-child(4) { left: 40%; animation-duration: 14s; animation-delay: 6s; font-size: 1.3em; }
-.snowflake:nth-child(5) { left: 50%; animation-duration: 16s; animation-delay: 8s; font-size: 1.1em; }
-.snowflake:nth-child(6) { left: 60%; animation-duration: 18s; animation-delay: 10s; font-size: 1.4em; }
-.snowflake:nth-child(7) { left: 70%; animation-duration: 20s; animation-delay: 12s; font-size: 1.2em; }
-.snowflake:nth-child(8) { left: 80%; animation-duration: 22s; animation-delay: 14s; font-size: 1.3em; }
-.snowflake:nth-child(9) { left: 90%; animation-duration: 24s; animation-delay: 16s; font-size: 1.1em; }
-.snowflake:nth-child(10) { left: 100%; animation-duration: 26s; animation-delay: 18s; font-size: 1.5em; }
+.snowflake:nth-child(1) {
+    left: 10%;
+    animation-duration: 8s;
+    animation-delay: 0s;
+    font-size: 1.5em;
+}
+
+.snowflake:nth-child(2) {
+    left: 20%;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    font-size: 1em;
+}
+
+.snowflake:nth-child(3) {
+    left: 30%;
+    animation-duration: 12s;
+    animation-delay: 4s;
+    font-size: 1.2em;
+}
+
+.snowflake:nth-child(4) {
+    left: 40%;
+    animation-duration: 14s;
+    animation-delay: 6s;
+    font-size: 1.3em;
+}
+
+.snowflake:nth-child(5) {
+    left: 50%;
+    animation-duration: 16s;
+    animation-delay: 8s;
+    font-size: 1.1em;
+}
+
+.snowflake:nth-child(6) {
+    left: 60%;
+    animation-duration: 18s;
+    animation-delay: 10s;
+    font-size: 1.4em;
+}
+
+.snowflake:nth-child(7) {
+    left: 70%;
+    animation-duration: 20s;
+    animation-delay: 12s;
+    font-size: 1.2em;
+}
+
+.snowflake:nth-child(8) {
+    left: 80%;
+    animation-duration: 22s;
+    animation-delay: 14s;
+    font-size: 1.3em;
+}
+
+.snowflake:nth-child(9) {
+    left: 90%;
+    animation-duration: 24s;
+    animation-delay: 16s;
+    font-size: 1.1em;
+}
+
+.snowflake:nth-child(10) {
+    left: 100%;
+    animation-duration: 26s;
+    animation-delay: 18s;
+    font-size: 1.5em;
+}
