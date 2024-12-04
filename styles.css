@@ -7,7 +7,7 @@ body {
     margin: 0;
     background-color: #305634;
     color: #E1E0DE;
-    overflow: auto;
+    overflow: hidden;
     background-image: url('https://example.com/path/to/christmas-background.jpg'); /* Füge hier den Link zu einem weihnachtlichen Hintergrundbild ein */
     background-size: cover;
     background-position: center;
@@ -21,6 +21,8 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 1200px;
     margin: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 h1 {
@@ -30,14 +32,14 @@ h1 {
 }
 
 .webcam-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
     gap: 20px;
     position: relative;
 }
 
 .webcam-item {
     text-align: center;
+    flex: 0 0 auto;
 }
 
 .webcam-item h2 {
@@ -47,7 +49,7 @@ h1 {
 }
 
 img {
-    width: 100%;
+    width: 300px;
     height: 200px;
     object-fit: cover;
     border: 5px solid #fff;
