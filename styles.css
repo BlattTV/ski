@@ -1,13 +1,9 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+html, body {
+    height: 100%;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
     background-color: #305634;
     color: #E1E0DE;
-    overflow: hidden;
     background-image: url('https://example.com/path/to/christmas-background.jpg'); /* Füge hier den Link zu einem weihnachtlichen Hintergrundbild ein */
     background-size: cover;
     background-position: center;
@@ -19,10 +15,9 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 1200px;
-    margin: 20px;
-    overflow-x: auto;
-    white-space: nowrap;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: auto;
 }
 
 h1 {
@@ -32,14 +27,14 @@ h1 {
 }
 
 .webcam-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     position: relative;
 }
 
 .webcam-item {
     text-align: center;
-    flex: 0 0 auto;
 }
 
 .webcam-item h2 {
@@ -49,9 +44,8 @@ h1 {
 }
 
 img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
     border: 5px solid #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -62,24 +56,6 @@ img {
 img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.refresh-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background: linear-gradient(45deg, #8A191D, #6E0F12);
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    transition: background 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.refresh-btn:hover {
-    background: linear-gradient(45deg, #6E0F12, #8A191D);
-    transform: scale(1.05);
 }
 
 .info {
@@ -116,72 +92,13 @@ img:hover {
     }
 }
 
-.snowflake:nth-child(1) {
-    left: 10%;
-    animation-duration: 8s;
-    animation-delay: 0s;
-    font-size: 1.5em;
-}
-
-.snowflake:nth-child(2) {
-    left: 20%;
-    animation-duration: 10s;
-    animation-delay: 2s;
-    font-size: 1em;
-}
-
-.snowflake:nth-child(3) {
-    left: 30%;
-    animation-duration: 12s;
-    animation-delay: 4s;
-    font-size: 1.2em;
-}
-
-.snowflake:nth-child(4) {
-    left: 40%;
-    animation-duration: 14s;
-    animation-delay: 6s;
-    font-size: 1.3em;
-}
-
-.snowflake:nth-child(5) {
-    left: 50%;
-    animation-duration: 16s;
-    animation-delay: 8s;
-    font-size: 1.1em;
-}
-
-.snowflake:nth-child(6) {
-    left: 60%;
-    animation-duration: 18s;
-    animation-delay: 10s;
-    font-size: 1.4em;
-}
-
-.snowflake:nth-child(7) {
-    left: 70%;
-    animation-duration: 20s;
-    animation-delay: 12s;
-    font-size: 1.2em;
-}
-
-.snowflake:nth-child(8) {
-    left: 80%;
-    animation-duration: 22s;
-    animation-delay: 14s;
-    font-size: 1.3em;
-}
-
-.snowflake:nth-child(9) {
-    left: 90%;
-    animation-duration: 24s;
-    animation-delay: 16s;
-    font-size: 1.1em;
-}
-
-.snowflake:nth-child(10) {
-    left: 100%;
-    animation-duration: 26s;
-    animation-delay: 18s;
-    font-size: 1.5em;
-}
+.snowflake:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; font-size: 1.5em; }
+.snowflake:nth-child(2) { left: 20%; animation-duration: 10s; animation-delay: 2s; font-size: 1em; }
+.snowflake:nth-child(3) { left: 30%; animation-duration: 12s; animation-delay: 4s; font-size: 1.2em; }
+.snowflake:nth-child(4) { left: 40%; animation-duration: 14s; animation-delay: 6s; font-size: 1.3em; }
+.snowflake:nth-child(5) { left: 50%; animation-duration: 16s; animation-delay: 8s; font-size: 1.1em; }
+.snowflake:nth-child(6) { left: 60%; animation-duration: 18s; animation-delay: 10s; font-size: 1.4em; }
+.snowflake:nth-child(7) { left: 70%; animation-duration: 20s; animation-delay: 12s; font-size: 1.2em; }
+.snowflake:nth-child(8) { left: 80%; animation-duration: 22s; animation-delay: 14s; font-size: 1.3em; }
+.snowflake:nth-child(9) { left: 90%; animation-duration: 24s; animation-delay: 16s; font-size: 1.1em; }
+.snowflake:nth-child(10) { left: 100%; animation-duration: 26s; animation-delay: 18s; font-size: 1.5em; }
