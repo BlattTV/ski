@@ -1,4 +1,4 @@
-﻿body {
+body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
@@ -28,7 +28,20 @@ h1 {
 }
 
 .webcam-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
     position: relative;
+}
+
+.webcam-item {
+    text-align: center;
+}
+
+.webcam-item h2 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #AE874C;
 }
 
 img {
@@ -41,10 +54,10 @@ img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-    img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    }
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
 
 .info {
     margin-top: 20px;
@@ -75,7 +88,6 @@ img {
     0% {
         transform: translateY(0);
     }
-
     100% {
         transform: translateY(100vh);
     }
