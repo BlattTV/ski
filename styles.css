@@ -193,3 +193,58 @@ body {
         padding: 10px;
     }
 }
+/* Grundlegende Layout-Anpassungen */
+body {
+    display: block; /* Flex entfernen für mobile Geräte */
+    height: auto; /* Höhe dynamisch */
+    overflow-y: auto; /* Ermöglicht Scrollen */
+    padding: 0;
+    margin: 0;
+}
+
+/* Mobile Ansicht für Container */
+.container {
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 90%; /* Rand für bessere Lesbarkeit */
+    box-sizing: border-box; /* Rand miteinbeziehen */
+}
+
+/* Webcams-Container */
+.webcam-container {
+    grid-template-columns: 1fr; /* Eine Spalte für kleine Geräte */
+    gap: 10px; /* Weniger Abstand bei mobilen Geräten */
+}
+
+/* Bilder der Webcams */
+.webcam-item img {
+    max-width: 100%; /* Keine feste Größe */
+    height: auto;
+}
+
+/* Buttons */
+.btn {
+    font-size: 0.9em; /* Kleinere Schriftgröße */
+    padding: 8px 15px; /* Weniger Padding */
+}
+
+/* Schneeflocken für mobile Geräte */
+.snowflakes {
+    display: none; /* Optional: Schneeflocken auf mobilen Geräten deaktivieren */
+}
+
+/* Mobile Ansicht anpassen */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .webcam-item h2 {
+        font-size: 1.2em;
+    }
+
+    .webcam-container {
+        margin: 0 auto;
+        gap: 15px; /* Mehr Abstand bei mittleren Geräten */
+    }
+}
