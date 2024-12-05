@@ -1,12 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Webcams</title>
+    <title>Live Webcams - Skiorte</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Schneeflocken-Effekt -->
     <div class="snowflakes" aria-hidden="true">
         <div class="snowflake">❅</div>
         <div class="snowflake">❅</div>
@@ -19,33 +20,45 @@
         <div class="snowflake">❆</div>
         <div class="snowflake">❄</div>
     </div>
-<div class="webcam-container">
-    <div class="webcam-item">
-        <h2>Neukirchen</h2>
-        <img id="webcam1" src="https://www.julianpopp.de/wfc/wfc.jpg" alt="Webcam 1">
-        <a href="https://maps.app.goo.gl/rAkP3nyRq4yerWDs8" target="_blank" class="btn">Zu Google Maps</a>
-    </div>
-    <div class="webcam-item">
-        <h2>Heubach</h2>
-        <img id="webcam2" src="https://www.skiarea-heubach.com/wp-content/uploads/2023/12/skiarea-cam.jpg" alt="Webcam 2">
-        <a href="https://maps.app.goo.gl/NPLaPTSMC9EoZenf9" target="_blank" class="btn">Zu Google Maps</a>
-    </div>
-    <div class="webcam-item">
-        <h2>Silbersattel</h2>
-        <img id="webcam3" src="https://skiarena3.7cam.eu/webcam.jpg" alt="Webcam 3">
-        <a href="https://maps.app.goo.gl/6vF9PdCGbw2EvMbA6" target="_blank" class="btn">Zu Google Maps</a>
-    </div>
-    <div class="webcam-item">
-        <h2>Masserberg</h2>
-        <img id="webcam4" src="https://webcams.masserberg.de/turmcam.jpg" alt="Webcam 4">
-        <a href="https://maps.app.goo.gl/LzLitR7kzfsJF8ir7" target="_blank" class="btn">Zu Google Maps</a>
-    </div>
-</div>
 
-        <div class="info">
-            <p>Es ist Zeit, Ski zu fahren!</p>
+    <!-- Container für alle Inhalte -->
+    <div class="container">
+        <h1>Live-Webcams in Skiorten</h1>
+        <p class="info">Erlebe die schönsten Schneelandschaften in Echtzeit!</p>
+
+        <!-- Webcam-Container -->
+        <div class="webcam-container">
+            <!-- Webcam 1 -->
+            <div class="webcam-item">
+                <h2>Neukirchen</h2>
+                <img id="webcam1" src="https://www.julianpopp.de/wfc/wfc.jpg" alt="Live-Ansicht Neukirchen">
+                <a href="https://maps.app.goo.gl/rAkP3nyRq4yerWDs8" target="_blank" class="btn">Zu Google Maps</a>
+            </div>
+
+            <!-- Webcam 2 -->
+            <div class="webcam-item">
+                <h2>Heubach</h2>
+                <img id="webcam2" src="https://www.skiarea-heubach.com/wp-content/uploads/2023/12/skiarea-cam.jpg" alt="Live-Ansicht Heubach">
+                <a href="https://maps.app.goo.gl/NPLaPTSMC9EoZenf9" target="_blank" class="btn">Zu Google Maps</a>
+            </div>
+
+            <!-- Webcam 3 -->
+            <div class="webcam-item">
+                <h2>Silbersattel</h2>
+                <img id="webcam3" src="https://skiarena3.7cam.eu/webcam.jpg" alt="Live-Ansicht Silbersattel">
+                <a href="https://maps.app.goo.gl/6vF9PdCGbw2EvMbA6" target="_blank" class="btn">Zu Google Maps</a>
+            </div>
+
+            <!-- Webcam 4 -->
+            <div class="webcam-item">
+                <h2>Masserberg</h2>
+                <img id="webcam4" src="https://webcams.masserberg.de/turmcam.jpg" alt="Live-Ansicht Masserberg">
+                <a href="https://maps.app.goo.gl/LzLitR7kzfsJF8ir7" target="_blank" class="btn">Zu Google Maps</a>
+            </div>
         </div>
     </div>
+
+    <!-- JavaScript für interaktive Funktionen -->
     <script src="script.js"></script>
 </body>
 </html>
