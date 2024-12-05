@@ -209,14 +209,9 @@ h1 {
         font-size: 1em;
         margin-top: 10px;
     }
-
-    /* Schneeflocken auf mobilen Geräten deaktivieren */
-    .snowflakes {
-        display: none;
-    }
 }
 
-/* Schneeflocken-Animation für Desktop */
+/* Schneeflocken-Animation für PC und Handy */
 .snowflakes {
     position: absolute;
     top: 0;
@@ -246,6 +241,7 @@ h1 {
     }
 }
 
+/* Zufällige Positionierung der Schneeflocken */
 .snowflake:nth-child(1) { left: 10%; animation-duration: 8s; font-size: 1.5em; }
 .snowflake:nth-child(2) { left: 20%; animation-duration: 10s; font-size: 1em; }
 .snowflake:nth-child(3) { left: 30%; animation-duration: 12s; font-size: 1.2em; }
