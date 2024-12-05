@@ -163,12 +163,12 @@ h1 {
 /* Desktop-Layout: Dieses Layout gilt für größere Bildschirme */
 @media (min-width: 769px) {
     body {
-        padding: 0; /* Padding für den Desktop-Bereich */
+        padding: 0;
     }
 
     .webcam-container {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px; /* Mehr Abstand auf größeren Bildschirmen */
+        gap: 20px;
     }
 
     .webcam-item {
@@ -178,7 +178,6 @@ h1 {
 
 /* Mobile Ansicht */
 @media (max-width: 768px) {
-    /* Für kleine Bildschirme */
     body {
         padding: 10px;
     }
@@ -211,7 +210,49 @@ h1 {
         margin-top: 10px;
     }
 
+    /* Schneeflocken auf mobilen Geräten deaktivieren */
     .snowflakes {
-        display: none; /* Schneeflocken auf Handys deaktivieren */
+        display: none;
     }
 }
+
+/* Schneeflocken-Animation für Desktop */
+.snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: #fff;
+    font-size: 1em;
+    user-select: none;
+    z-index: 2;
+    animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.snowflake:nth-child(1) { left: 10%; animation-duration: 8s; font-size: 1.5em; }
+.snowflake:nth-child(2) { left: 20%; animation-duration: 10s; font-size: 1em; }
+.snowflake:nth-child(3) { left: 30%; animation-duration: 12s; font-size: 1.2em; }
+.snowflake:nth-child(4) { left: 40%; animation-duration: 14s; font-size: 1.3em; }
+.snowflake:nth-child(5) { left: 50%; animation-duration: 16s; font-size: 1.1em; }
+.snowflake:nth-child(6) { left: 60%; animation-duration: 18s; font-size: 1.4em; }
+.snowflake:nth-child(7) { left: 70%; animation-duration: 20s; font-size: 1.2em; }
+.snowflake:nth-child(8) { left: 80%; animation-duration: 22s; font-size: 1.3em; }
+.snowflake:nth-child(9) { left: 90%; animation-duration: 24s; font-size: 1.1em; }
+.snowflake:nth-child(10) { left: 100%; animation-duration: 26s; font-size: 1.5em; }
