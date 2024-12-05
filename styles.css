@@ -1,7 +1,7 @@
-/* Allgemeine Layout-Anpassungen */
+/* Grundlegende Layout-Anpassungen */
 body {
     font-family: 'Roboto', sans-serif;
-    display: block; /* Entfernt flex */
+    display: block;
     margin: 0;
     padding: 0;
     background-color: #305634;
@@ -9,10 +9,11 @@ body {
     background-image: url('https://static.vecteezy.com/ti/fotos-kostenlos/p2/28841160-gruner-weihnachtshintergrund-kostenlos-foto.jpg');
     background-size: cover;
     background-position: center;
-    height: auto; /* Dynamische Höhe für den Body */
-    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+    height: auto;
+    overflow-x: hidden;
 }
 
+/* Container */
 .container {
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
@@ -21,7 +22,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: fadeIn 2s ease-out;
     margin: 20px auto;
-    max-width: 90%; /* Bessere mobile Sichtbarkeit */
+    max-width: 90%;
     box-sizing: border-box;
 }
 
@@ -159,9 +160,25 @@ h1 {
     }
 }
 
+/* Desktop-Layout: Dieses Layout gilt für größere Bildschirme */
+@media (min-width: 769px) {
+    body {
+        padding: 0; /* Padding für den Desktop-Bereich */
+    }
+
+    .webcam-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px; /* Mehr Abstand auf größeren Bildschirmen */
+    }
+
+    .webcam-item {
+        padding: 20px;
+    }
+}
+
 /* Mobile Ansicht */
 @media (max-width: 768px) {
-    /* Reduzierte Abstände und größere Schrift für Handys */
+    /* Für kleine Bildschirme */
     body {
         padding: 10px;
     }
@@ -173,7 +190,6 @@ h1 {
     .webcam-container {
         grid-template-columns: 1fr;
         gap: 10px;
-        margin: 0 auto;
     }
 
     .webcam-item {
